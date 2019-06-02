@@ -3,47 +3,57 @@ const assert = require('assert');
 
 const mbrainz = require('./../main');
 
-const TEST_NIRVANA_ID = '5b11f4ce-a62d-471e-81fc-a69a8278c7da';
-const TEST_A_PRIVATE_UNDERSTANDING_ID = '564c681d-b1bc-4953-91f2-4f052aac4f58';
-const A_PRIVATE_UNDERSTANDING = 'A Private Understanding';
+const testVariablesArtist = {
+  artist: {
+    name: 'Nirvana'
+  },
+  id: '5b11f4ce-a62d-471e-81fc-a69a8278c7da'
+}
+
+const testVariablesRecording = {
+  track: {
+    title: 'A Private Understanding'
+  },
+  id: '564c681d-b1bc-4953-91f2-4f052aac4f58'
+}
 
 describe('main', () => {
   
   describe('getDataArtist()', () => {
     it('should return an object', () => {
-      mbrainz.getDataArtist(TEST_NIRVANA_ID)
+      mbrainz.getDataArtist(testVariablesArtist.id)
         .then((data) => {
           assert.deepStrictEqual(typeof data, "object");
         });
     });
 
     it('should return an object with matching id', () => {
-      mbrainz.getDataArtist(TEST_NIRVANA_ID)
+      mbrainz.getDataArtist(testVariablesArtist.id)
         .then((data) => {
-          assert.deepStrictEqual(data.id, TEST_NIRVANA_ID);
+          assert.deepStrictEqual(data.id, testVariablesArtist.id);
         });
     });
   });
     
     describe('getDataRecording()', () => {
       it('should return an object', () => {
-        mbrainz.getDataRecording(TEST_A_PRIVATE_UNDERSTANDING_ID)
+        mbrainz.getDataRecording(testVariablesRecording.id)
         .then((data) => {
           assert.deepStrictEqual(typeof data, 'object');
         });
       });
 
       it('should return an object with matching id', () => {
-        mbrainz.getDataRecording(TEST_A_PRIVATE_UNDERSTANDING_ID)
+        mbrainz.getDataRecording(testVariablesRecording.id)
           .then((data) => {
-            assert.deepStrictEqual(data.id, TEST_A_PRIVATE_UNDERSTANDING_ID);
+            assert.deepStrictEqual(data.id, testVariablesRecording.id);
           });
       });
 
       it('should return an object with matching title', () => {
-        mbrainz.getDataRecording(TEST_A_PRIVATE_UNDERSTANDING_ID)
+        mbrainz.getDataRecording(testVariablesRecording.id)
           .then((data) => {
-            assert.deepStrictEqual(data.title, A_PRIVATE_UNDERSTANDING);
+            assert.deepStrictEqual(data.title, testVariablesRecording.track.title);
           });
       });
    });
