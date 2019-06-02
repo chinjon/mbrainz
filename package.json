@@ -1,12 +1,12 @@
 {
-  "name": "mbrainz_wrapper",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "mbrainz",
+  "version": "0.0.1",
+  "description": "An utility module to be used with APIs that leverage Musicbrainz Ids",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Jonathan Chin",
   "license": "ISC",
   "dependencies": {
     "es6-promise": "^4.2.6",
