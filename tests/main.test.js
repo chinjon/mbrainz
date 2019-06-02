@@ -20,41 +20,51 @@ const testVariablesRecording = {
 describe('main', () => {
   
   describe('getDataArtist()', () => {
-    it('should return an object', () => {
-      mbrainz.getDataArtist(testVariablesArtist.id)
-        .then((data) => {
-          assert.deepStrictEqual(typeof data, "object");
+
+    it('should return an object', async () => {
+      await mbrainz.getDataArtist(testVariablesArtist.id)
+        .then((artistData) => {
+          assert.deepStrictEqual(typeof artistData, "object");
         });
     });
 
-    it('should return an object with matching id', () => {
-      mbrainz.getDataArtist(testVariablesArtist.id)
-        .then((data) => {
-          assert.deepStrictEqual(data.id, testVariablesArtist.id);
+    it('should return an object with matching id', async () => {
+     await mbrainz.getDataArtist(testVariablesArtist.id)
+        .then((artistData) => {
+          assert.deepStrictEqual(artistData.id, testVariablesArtist.id);
+        });
+    });
+
+    it('should return an object with correct artist name', async () => {
+      await mbrainz.getDataArtist(testVariablesArtist.id)
+        .then((artistData) => {
+          assert.deepStrictEqual(artistData.name, testVariablesArtist.artist.name);
         });
     });
   });
     
-    describe('getDataRecording()', () => {
-      it('should return an object', () => {
-        mbrainz.getDataRecording(testVariablesRecording.id)
+  describe('getDataRecording()', () => {
+
+    it('should return an object', async () => {
+      await mbrainz.getDataRecording(testVariablesRecording.id)
+      .then((data) => {
+        assert.deepStrictEqual(typeof data, 'object');
+      });
+    });
+
+    it('should return an object with matching id', async () => {
+      await mbrainz.getDataRecording(testVariablesRecording.id)
         .then((data) => {
-          assert.deepStrictEqual(typeof data, 'object');
+          assert.deepStrictEqual(data.id, testVariablesRecording.id);
         });
-      });
+    });
 
-      it('should return an object with matching id', () => {
-        mbrainz.getDataRecording(testVariablesRecording.id)
-          .then((data) => {
-            assert.deepStrictEqual(data.id, testVariablesRecording.id);
-          });
-      });
+    it('should return an object with matching title', async () => {
+     await mbrainz.getDataRecording(testVariablesRecording.id)
+        .then((data) => {
+          assert.deepStrictEqual(data.title, testVariablesRecording.track.title);
+        });
+    });
+  });
 
-      it('should return an object with matching title', () => {
-        mbrainz.getDataRecording(testVariablesRecording.id)
-          .then((data) => {
-            assert.deepStrictEqual(data.title, testVariablesRecording.track.title);
-          });
-      });
-   });
 });
