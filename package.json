@@ -1,0 +1,18 @@
+{
+  "name": "mbrainz_wrapper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "es6-promise": "^4.2.6",
+    "isomorphic-fetch": "^2.2.1"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  }
+}
