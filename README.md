@@ -4,6 +4,8 @@
 
 A project to use as a wrapper for the Musicbrainz API. This is recommended to be used with another API that leverages Musicbrainz ID such as the Last.fm API. Musicbrainz is a metadata service that is opensource and independent of restrictive music databases such as the Compact Disc Database.
 
+The MusicBrainz API will only return data if a valid MusicBrainz ID value has been inputted. This API does not leverage search queries. 
+
 ### Links
 
 - [MusicBrainz Website](https://musicbrainz.org/)
