@@ -27,3 +27,39 @@ The MusicBrainz API will only return data if a valid MusicBrainz ID value has be
 ```
 1. Run `npm run test` in project root.
 ```
+
+***
+
+## Usage
+
+NOTE, MusicBrainz does not accept search queries. The valid MusicBrainz ID number must be known, which can be obtained via an API such as LastFM.
+
+**Searching for artist data**
+
+```js
+const mbrainz = require('mbrainz');
+const NIRVANA_MBZ_ID = '5b11f4ce-a62d-471e-81fc-a69a8278c7da';
+
+await mbrainz.getDataArtist(NIRVANA_MBZ_ID)
+  .then((artistData) => {
+   console.log(artistData);
+  });
+
+// RETURNS
+/**
+  {
+    "id": "5b11f4ce-a62d-471e-81fc-a69a8278c7da",
+    "name": "Nirvana",
+    "sort-name": "Nirvana"
+    "type": "Group",
+    "country": "US",
+    "disambiguation": "90s US grunge band",
+    "life-span": {
+        "ended": true,
+        "begin": "1988-02",
+        "end": "1994-04-05"
+    },
+    "aliases": [ { "name": "Nirvana US", "sort-name": "Nirvana US" } ]]
+  }
+ *  
+```
