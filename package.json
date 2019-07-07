@@ -4,7 +4,7 @@
   "description": "An utility module to be used with APIs that leverage Musicbrainz Ids",
   "main": "main.js",
   "scripts": {
-    "test": "mocha ./tests/main.test.js"
+    "test": "./node_modules/.bin/_mocha.cmd ./tests/main.test.js"
   },
   "author": "Jonathan Chin",
   "license": "ISC",
