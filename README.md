@@ -2,9 +2,9 @@
 
 ## Background
 
-A project to use as a wrapper for the Musicbrainz API. This is recommended to be used with another API that leverages Musicbrainz ID such as the Last.fm API. Musicbrainz is a metadata service that is opensource and independent of restrictive music databases such as the Compact Disc Database.
+A project to use as a wrapper for the `Musicbrainz API`. This is recommended to be used with another API that leverages `Musicbrainz ID` such as the `Last.fm API`. `Musicbrainz` is a metadata service that is opensource and independent of restrictive music databases such as the `Compact Disc Database`.
 
-The MusicBrainz API will only return data if a valid MusicBrainz ID value has been inputted. This API does not leverage search queries. 
+The `MusicBrainz API` will only return data if a valid MusicBrainz ID value has been inputted. This API does not leverage search queries. 
 
 The purpose of this project is to provide an interface between APIs that leverage MusicBrainz IDs such as LastFM and obtain that metadata.
 
@@ -22,8 +22,8 @@ The purpose of this project is to provide an interface between APIs that leverag
 
 
 1. Run: git clone "https://github.com/chinjon/mbrainz.git"
-2. CD into mbrainz
-3. Run: npm install
+2. CD into `mbrainz`
+3. Run: `npm install`
 
 ***
 
@@ -35,7 +35,7 @@ The purpose of this project is to provide an interface between APIs that leverag
 
 ## Usage
 
-NOTE, MusicBrainz does not accept search queries. The valid MusicBrainz ID number must be known, which can be obtained via an API such as LastFM.
+NOTE, MusicBrainz does not accept search queries. The valid `MusicBrainz ID` number must be known, which can be obtained via an API such as LastFM.
 
 **Searching for artist data**
 
