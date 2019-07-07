@@ -80,3 +80,9 @@ await mbrainz.getDataArtist(NIRVANA_MBZ_ID)
 
 * `Isomorphic Fetch` - used to make API calls to `MusicBrainz`
 * `async/await` - used for asynchromous calls to `MusicBrainz` API
+
+***
+
+## Similar Libraries
+
+- [MusicBrainz API](https://github.com/Borewit/musicbrainz-api) - _Node MusicBrainz API client for reading and submitting metadata_
