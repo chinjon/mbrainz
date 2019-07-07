@@ -8,6 +8,8 @@ The MusicBrainz API will only return data if a valid MusicBrainz ID value has be
 
 The purpose of this project is to provide an interface between APIs that leverage MusicBrainz IDs such as LastFM and obtain that metadata.
 
+**DISCLAIMER: THIS IS NOT AFFLIATED WITH MUSICBRAINZ OR LASTFM**
+
 ### Links
 
 - [MusicBrainz Website](https://musicbrainz.org/)
