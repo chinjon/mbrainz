@@ -65,3 +65,9 @@ await mbrainz.getDataArtist(NIRVANA_MBZ_ID)
   }
  *  
 ```
+
+### Available search paramters
+
+* `mbrainz.getDataArtist()` - obtain data on artist
+* `mbrainz.getDataLabel()` - obtain data on record label
+* `mbrainz.getDataRecording()` - obtain data on song/recording
