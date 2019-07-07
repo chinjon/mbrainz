@@ -20,7 +20,6 @@ The purpose of this project is to provide an interface between APIs that leverag
 
 ## Development
 
-
 1. Run: git clone "https://github.com/chinjon/mbrainz.git"
 2. CD into `mbrainz`
 3. Run: `npm install`
