@@ -6,6 +6,8 @@ A project to use as a wrapper for the Musicbrainz API. This is recommended to be
 
 The MusicBrainz API will only return data if a valid MusicBrainz ID value has been inputted. This API does not leverage search queries. 
 
+The purpose of this project is to provide an interface between APIs that leverage MusicBrainz IDs such as LastFM and obtain that metadata.
+
 ### Links
 
 - [MusicBrainz Website](https://musicbrainz.org/)
