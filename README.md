@@ -64,7 +64,7 @@ await mbrainz.getDataArtist(NIRVANA_MBZ_ID)
     "aliases": [ { "name": "Nirvana US", "sort-name": "Nirvana US" } ]]
   }
  *  
-```js
+```
 
 ***
 
