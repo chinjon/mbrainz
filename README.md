@@ -2,7 +2,7 @@
 
 ## Background
 
-A project to use as a wrapper for the `Musicbrainz API`. This is recommended to be used with another API that leverages `Musicbrainz ID` such as the `Last.fm API`. `Musicbrainz` is a metadata service that is opensource and independent of restrictive music databases such as the `Compact Disc Database`.
+A project to be use as a wrapper for the `Musicbrainz API`. This is recommended to be used with another API that leverages `Musicbrainz ID` such as the `Last.fm API`. `Musicbrainz` is a metadata service that is opensource and independent of restrictive music databases such as the `Compact Disc Database`.
 
 The `MusicBrainz API` will only return data if a valid MusicBrainz ID value has been inputted. This API does not leverage search queries. 
 
@@ -64,10 +64,19 @@ await mbrainz.getDataArtist(NIRVANA_MBZ_ID)
     "aliases": [ { "name": "Nirvana US", "sort-name": "Nirvana US" } ]]
   }
  *  
-```
+```js
+
+***
 
 ### Available search paramters
 
 * `mbrainz.getDataArtist()` - obtain data on artist
 * `mbrainz.getDataLabel()` - obtain data on record label
 * `mbrainz.getDataRecording()` - obtain data on song/recording
+
+***
+
+### Stuff Under The Hood
+
+* `Isomorphic Fetch` - used to make API calls to `MusicBrainz`
+* `async/await` - used for asynchromous calls to `MusicBrainz` API
