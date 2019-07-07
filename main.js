@@ -17,6 +17,16 @@ const getDataArtist = async (musicbrainzId) => {
   }
 }
 
+const getDataLabel = async (musicbrainzId) => {
+  try {
+    const response = await fetch(setMusicbrainzSearchQuery(musicbrainzId,'label'));
+    const data = await response.json();
+    return data ; 
+  } catch (error) {
+    throw error;
+  }
+}
+
 const getDataRecording = async (musicbrainzId) => {
   try {
     const response = await fetch(setMusicbrainzSearchQuery(musicbrainzId,'recording'));
@@ -29,5 +39,6 @@ const getDataRecording = async (musicbrainzId) => {
 
 module.exports = mbrainz = {
   getDataArtist,
+  getDataLabel,
   getDataRecording 
 }
