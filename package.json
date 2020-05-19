@@ -4,7 +4,8 @@
   "description": "An utility module to be used with APIs that leverage Musicbrainz Ids",
   "main": "main.js",
   "scripts": {
-    "test": "./node_modules/.bin/_mocha.cmd ./tests/main.test.js"
+    "test": "./node_modules/.bin/_mocha.cmd ./tests/main.test.js",
+    "coverage": "nyc npm run test"
   },
   "author": "Jonathan Chin",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "isomorphic-fetch": "^2.2.1"
   },
   "devDependencies": {
-    "mocha": "^7.1.2"
+    "mocha": "^7.1.2",
+    "nyc": "^15.0.1"
   }
 }
